@@ -1,0 +1,52 @@
+.sidebar
+{
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    width: 200px;
+    bottom: 0;
+    padding: 0 9px 0 9px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.boxes
+{
+ height: 50px;
+ display: flex;
+ padding-left: 10px;
+ align-items: center;
+ cursor: pointer;
+ border-radius: 10px;
+}
+.boxes img{
+    height: 24px;
+}
+.boxes:hover
+{
+    background-color: rgb(245, 245, 245);
+}
+.boxes p{
+    margin-left: 20px;
+    font-size: 14px;
+}
+.boxes .youtbe-kids{
+transform: rotate(-9deg);
+}
+.about-section
+{
+    padding: 4px 9px 6px 9px;
+}
+.about-section a{
+text-decoration: none;
+color:rgb(8, 8, 8);
+font-weight: 500;
+font-size: 12px;
+}
+.copy-rigtht-text
+{
+ color:#575656;
+ font-size:12px;
+}
+.more-from-text
+{
+    padding-left: 20px;
+}

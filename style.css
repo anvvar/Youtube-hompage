@@ -1,0 +1,72 @@
+
+
+.video-grid
+{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding-right: 25px;
+}
+
+.video-info-grid{
+  height: 90px;
+  display: grid;
+  grid-template-columns:80px 1fr ;
+}
+
+.channel-picture{
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.thumbnail-row
+{
+ position: relative;
+  margin-bottom: 10px;
+}
+.thumbnail
+{
+  border-radius: 18px;
+  width: 100%;
+}
+.creater-name
+{
+ color:rgb(54, 54, 54);
+}
+.top
+{
+  height: 50px;
+
+}
+.top button
+{
+  background-color: rgb(239 238 238);
+  color: rgb(76 73 73);
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.top .all-button
+{
+  color: rgb(255, 255, 255);
+  background-color: rgb(3, 3, 3);
+}
+
+.video-time
+{
+   position: absolute;
+    display: flex;
+    padding: 3px 5px 3px 5px;
+    bottom: 14px;
+    right: 8px;
+    font-size: 500;
+    border-radius: 5px;
+    background-color: #020202;
+    color: white;
+}
