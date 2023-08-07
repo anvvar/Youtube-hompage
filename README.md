@@ -6,7 +6,7 @@ This project is a YouTube homepage clone created using HTML and CSS. The purpose
 
 ## Demo
 
-*[ https://anvvar.github.io/Youtube-hompage/]*
+* https://anvvar.github.io/Youtube-hompage/*
 
 
 ## Technologies Used
