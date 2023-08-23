@@ -1,24 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/png" href="icons/youtube.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="general.css">
-  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/menu-collapse.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/sidebar.css">
+  <link rel="stylesheet" href="CSS/media.css">
+    
 </head>
 
 <body>
   <!-- header section -->
-  <div class="header">
+  <header class="header">
     <div class="logo">
-      <img class="menu-icon" src="icons/icons8-hamburger-menu.svg" alt="">
+      <a  id="close-btn" class="closebtn" onclick="hide()">×</a>
+      <button id="collapseButton" ><img class="menu-icon" src="icons/icons8-hamburger-menu.svg" alt=""></button>
       <img class="youtube-logo" src="icons/YouTube-Logo.svg" alt="">
     </div>
     <div class="searchbar-section">
@@ -30,13 +34,16 @@
     <div class="topright">
       <button class="uplod-button"><img class="uplod-icon" src="icons/upload.svg" alt=""></button>
       <button class="notification-button"><img class="notification-icon" src="icons/notifications.svg" alt=""></button>
-      <button class="user-button"><img src="images/user_3237472.png" alt=""></button>
-      <div class="notification-count">3</div>
+      <div class="notification-box">
+        <button class="user-button openbtn" id="openbtn" onclick="show()"><img src="images/user_3237472.png" alt=""></button>
+        <div class="notification-count">3</div>
+      </div>
+   
     </div>
 
-  </div>
+  </header>
   <!-- categories -->
-  <div class="top">
+  <nav class="top">
     <button class="all-button">All</button>
     <button>Gaming</button>
     <button>Computer Programming</button>
@@ -46,123 +53,169 @@
     <button>Recently uploaded</button>
     <button>Watched</button>
     <button>New to you</button>
+  </nav>
+<!-- menu collapse for small device -->
+
+<nav id="mySidebar" class="sidebar-mobile">
+  <div class="box-mobile"">
+    <img src="icons/home.svg" alt="">
+    <p>Your channel</p>
   </div>
+  <div class="box-mobile">
+    <img src="icons/home.svg" alt="">
+    <p>Switch account</p>
+  </div>
+  <hr>
+  <div class="box-mobile">
+    <img src="icons/home.svg" alt="">
+    <p>Get YouTube Premium</p>
+  </div>
+  <div class="box-mobile">
+    <img src="icons/home.svg" alt="">
+    <p>purchase and memberships</p>
+  </div>
+  <div class="box-mobile">
+    <img src="icons/home.svg" alt="">
+    <p>Your data in YouTube</p>
+  </div>
+  <hr>
+  <div class="box-mobile">
+    <img src="icons/settings_black_24dp.svg" alt="">
+    <p>Settings</p>
+  </div>
+  <hr>
+  <div class="box-mobile">
+    <img src="icons/help_outline_black_24dp.svg" alt="">
+    <p>Help</p>
+  </div>
+  <div class="box-mobile">
+    <img src="icons/announcement_black_24dp.svg" alt="">
+    <p>Feedback</p>
+  </div>
+</nav>
+
+
+
+
+
+
+
   <!-- sidebar -->
-  <div class="sidebar">
-    <div class="boxes">
+  <aside class="sidebar">
+    <div class="boxes show-icon">
       <img src="icons/home.svg" alt="">
       <p>Home</p>
     </div>
-    <div class="boxes">
+    <div class="boxes show-icon">
       <img src="icons/youtube-shorts-logo-15253.svg" alt="">
       <p>Shorts</p>
     </div>
-    <div class="boxes">
+    <div class="boxes show-icon">
       <img src="icons/subscriptions.svg" alt="">
       <p>Subscriptions</p>
     </div>
-    <hr>
-    <div class="boxes">
+    <hr class="hide-icon">
+    <div class="boxes show-icon">
       <img src="icons/library.svg" alt="">
       <p>Library</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/history_black_24dp.svg" alt="">
       <p>History</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/slideshow_black_24dp.svg " alt="">
       <p>Your videos</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/schedule_black_24dp.svg" alt="">
       <p>Watch Later</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/thumb_up_black_24dp.svg" alt="">
       <p>Liked videos</p>
     </div>
-    <hr>
-    <div class="boxes">
+    <hr class="hide-icon">
+    <div class="boxes hide-icon">
       <img src="icons/whatshot_black_24dp.svg" alt="">
       <p>Trending</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/shopping_bag_black_24dp.svg" alt="">
       <p>Shopping</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/music_note_black_24dp.svg" alt="">
       <p>Music</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/movie_creation_black_24dp.svg" alt="">
       <p>Films</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/antenna-signal.png" alt="">
       <p>Live</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/sports_esports_black_24dp.svg" alt="">
       <p>Gaming</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/newspaper.png" alt="">
       <p>News</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/trophy.png" alt="">
       <p>Sport</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/lightbulb_black_24dp.svg" alt="">
       <p>Learning</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/hanger.png" alt="">
       <p>Fashion & beuty</p>
     </div>
-    <hr>
-    <div class="more-from-text">
+    <hr class="hide-icon">
+    <div class="more-from-text hide-icon">
       <p>More form YouTube</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/youtube.png" alt="">
       <p>YouTube Premium</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img class="youtube-studio" src="icons/youtube-studio.png" alt="">
       <p>YouTube Studio</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/icons8-youtube-music (1).svg" alt="">
       <p>YouTube Music</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img class="youtbe-kids" src="icons/youtube kids.png" alt="">
       <p>YouTube Kids</p>
     </div>
 
-    <hr>
-    <div class="boxes">
+    <hr class="hide-icon">
+    <div class="boxes hide-icon">
       <img src="icons/settings_black_24dp.svg" alt="">
       <p>Settings</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/flag_black_24dp.svg" alt="">
       <p>Report history</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/help_outline_black_24dp.svg" alt="">
       <p>Help</p>
     </div>
-    <div class="boxes">
+    <div class="boxes hide-icon">
       <img src="icons/announcement_black_24dp.svg" alt="">
       <p>Send feedback</p>
     </div>
-    <hr>
-    <div class="about-section">
+    <hr class="hide-icon">
+    <div class="about-section hide-icon">
       <a href="">About</a>
       <a href="">Press</a>
       <a href="">Copyright</a>
@@ -171,19 +224,19 @@
       <a href="">Advertise</a>
       <a href=""> Developers</a>
     </div>
-    <div class="about-section">
+    <div class="about-section hide-icon">
       <a href="">Terms</a>
       <a href=""> Privacy</a>
       <a href=""> Policy & Safty</a>
-      <a href=""> How YouTube works</a>
+      <a href=""> How YouTube works</a><br>
       <a href="">Test new features</a>
     </div>
-    <div class="about-section">
+    <div class="about-section hide-icon">
       <p class="copy-rigtht-text">&copy 2023 Google LLC</p>
     </div>
-  </div>
+  </aside>
   <!-- main contents -->
-  <div class="video-grid">
+  <main class="video-grid" id="gridContainer">
     <div class="video-preview">
       <div class="thumbnail-row">
         <img class="thumbnail" src="images/thumbnails/oppenhiemer.webp" alt="">
@@ -194,7 +247,7 @@
             <img src="images/channel-pictures/universal.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>Oppenheimer | New Trailer</h4>
+          <p class="video-title">Oppenheimer | New Trailer</p>
           <p class="creater-name">Universal Pictures</p>
           <p>58M views. 2 months ago</p>
         </div>
@@ -211,7 +264,7 @@
             <img src="images/channel-pictures/kariku.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>Arrangement Kalyanam | Karikku | Comedy</h4>
+          <p class="video-title">Arrangement Kalyanam | Karikku | Comedy</p>
           <p class="creater-name">karikku</p>
           <p>37M views. 3 years ago</p>
         </div>
@@ -228,7 +281,7 @@
             <img src="images/channel-pictures/simpledev.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>HTML & CSS Full Course Beginer to Pro</h4>
+          <p class="video-title">HTML & CSS Full Course Beginer to Pro</p>
           <p class="creater-name">SuperSimpleDev</p>
           <p>5.7M views. 1 year ago</p>
         </div>
@@ -245,7 +298,7 @@
             <img src="images/channel-pictures/solo-camp.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>Relaxing SOLO Camping with Rain Forest Mountain views [ gloomy weather, cosy shelter, rain ASMR ]</h4>
+          <p class="video-title">Relaxing SOLO Camping with Rain Forest Mountain views [ gloomy weather, cosy shelter, rain ASMR ]</p>
           <p class="creater-name">Go4X4</p>
           <p>7.7M views. 6 months ago</p>
         </div>
@@ -262,9 +315,9 @@
             <img src="images/channel-pictures/chneel-venus.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>What If You Spent 5 Seconds on Venus</h4>
+          <p class="video-title">What If You Spent 5 Seconds on Venus</p>
           <p class="creater-name">What If</p>
-          <p>1.1M views. 1 months ago</p>
+          <p class="video-stats">1.1M views. 1 months ago</p>
         </div>
       </div>
     </div>
@@ -279,13 +332,20 @@
             <img src="images/channel-pictures/netgeo.jpg" alt="">
         </div>
         <div class="video-info">
-          <h4>This Crazy Tree Grows 40 Kinds of Fruit | National Geographic</h4>
+          <p class="video-title">This Crazy Tree Grows 40 Kinds of Fruit | National Geographic</p>
           <p class="creater-name">National Geographic</p>
           <p>14M views. 8 years ago</p>
         </div>
       </div>
     </div>
-  </div>
+
+
+  </main>
+
+
+  <!-- script link -->
+  <script src="script.js"></script>
+
 </body>
 
 </html>

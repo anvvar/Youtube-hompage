@@ -4,10 +4,20 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    grid-template-columns: 300px 1fr 220px;
+    height: 50px;
+    z-index: 2;
+    grid-template-columns: 10vw 80vw 10vw;
     background-color: white;
 }
+#collapseButton
+{
+   visibility: hidden;
+}
+#collapseButton:hover{
+    background-color: rgb(241, 241, 241);
+    border-radius: 50%;
+}
+
 
 input
 {
@@ -24,7 +34,7 @@ input
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 660px;
+    width: 50px;
     margin-left: 150px;
     margin-right: 30px;
 }
@@ -49,15 +59,16 @@ input
     outline: none; 
     border-color: rgb(12, 68, 187); 
 }
+.searchbar:focus .searchbar-section
+{
+   width: 700px;
+}
+
 .youtube-logo{
     height: 60px;
     width: 120px;
 }
-.menu-icon{
-    height: 20px;
-    margin-left: 20px;
-    margin-right: 10px;
-}
+
 .serch-icon
 {
     height: 20px;
@@ -72,8 +83,6 @@ input
     background: rgb(235 235 235);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius:0px;
     cursor: pointer;
     margin-left: -3px;
     margin-right: 8px;
@@ -103,7 +112,7 @@ input
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 32px;
+    margin-right: 5px;
     position: relative;
     
 }
@@ -112,6 +121,7 @@ input
     height: 30px;
     margin-top: 2px;
     cursor: pointer;
+   
 }
 .uplod-button
 {
@@ -122,8 +132,26 @@ input
     margin-right: 14px;
     margin-top: 1px;
     cursor: pointer;
+    visibility:hidden;
 }
-
+.notification-box
+{
+ position: relative;
+ visibility: hidden;
+}
+.notification-count
+{
+    height: 18px;
+    width: 19px;
+    background-color: rgb(205, 5, 5);
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    display: flex;
+    right: 4.5vw;
+}
 .notification-icon
 {
     height: 30px;
@@ -136,6 +164,7 @@ input
     border-radius: 15px;
     margin-top: 1px;
     cursor: pointer;
+    visibility: hidden;
 }
 
 .user-button
@@ -145,20 +174,7 @@ input
   
 }
 .user-button img{
- height: 33px;
+ height: 20px;
 
 }
 
-.notification-count
-{
-    height: 18px;
-    width: 19px;
-    background-color: rgb(205, 5, 5);
-    color: white;
-    border-radius: 10px;
-    justify-content: center;
-    position: absolute;
-    top: 15px;
-    display: flex;
-    right: 70px;;
-}
