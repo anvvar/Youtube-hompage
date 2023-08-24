@@ -19,59 +19,57 @@
 
 <body>
   <!-- header section -->
-  <header class="header">
-    <div class="logo">
-      <a  id="close-btn" class="closebtn" onclick="hide()">×</a>
-      <button id="collapseButton" ><img class="menu-icon" src="icons/icons8-hamburger-menu.svg" alt=""></button>
-      <img class="youtube-logo" src="icons/YouTube-Logo.svg" alt="">
-    </div>
-    <div class="searchbar-section">
-      <input class="searchbar" type="text" placeholder="Search">
-      <button class="search-button"><img class="serch-icon" src="icons/icons8-search.svg" alt=""></button>
-      <button class="voice-search"><img class="voice-icon" src="icons/microphone-solid.svg" alt=""></button>
-
-    </div>
-    <div class="topright">
-      <button class="uplod-button"><img class="uplod-icon" src="icons/upload.svg" alt=""></button>
-      <button class="notification-button"><img class="notification-icon" src="icons/notifications.svg" alt=""></button>
-      <div class="notification-box">
-        <button class="user-button openbtn" id="openbtn" onclick="show()"><img src="images/user_3237472.png" alt=""></button>
-        <div class="notification-count">3</div>
+  <header class="header firstGroup" id="header-deafult" >
+      <div class="logo">
+        <button id="collapseButton" ><img class="menu-icon" src="icons/icons8-hamburger-menu.svg" alt=""></button>
+        <img class="youtube-logo" src="icons/YouTube-Logo.svg" alt="">
       </div>
-   
-    </div>
+      <div class="searchbar-section">
+        <input class="searchbar" type="text" placeholder="Search">
+        <button class="search-button"><img class="serch-icon" src="icons/icons8-search.svg" alt=""></button>
+        <button class="voice-search"><img class="voice-icon" src="icons/microphone-solid.svg" alt=""></button>
+  
+      </div>
+      <div class="topright">
+        <button class="uplod-button"><img class="uplod-icon" src="icons/upload.svg" alt=""></button>
+        <button class="notification-button"><img class="notification-icon" src="icons/notifications.svg" alt=""></button>
+        <button class="user-button openbtn" id="openbtn" onclick="show()"><img src="images/user_3237472.png" alt=""></button>
+          <div class="notification-box">
+          <div class="notification-count">3</div>
+        </div>
+        </div>
+      </div>
+
 
   </header>
-  <!-- categories -->
-  <nav class="top">
-    <button class="all-button">All</button>
-    <button>Gaming</button>
-    <button>Computer Programming</button>
-    <button>Debates</button>
-    <button>News</button>
-    <button>Physics</button>
-    <button>Recently uploaded</button>
-    <button>Watched</button>
-    <button>New to you</button>
-  </nav>
+<!-- show only mobile devices when clicking user button -->
+
+
 <!-- menu collapse for small device -->
 
-<nav id="mySidebar" class="sidebar-mobile">
-  <div class="box-mobile"">
-    <img src="icons/home.svg" alt="">
+<nav id="mySidebar" class="sidebar-mobile secondGroup">
+  <div class="header-formobile">
+    <button  id="close-btn" class="closebtn" onclick="hide()">
+     <img src="icons/close.svg" alt="">
+    </button>
+    <p>Account</p>
+  </div>
+  <hr>
+  <div class="box-mobile">
+    <img src="icons/switch_account_FILL0_wght300_GRAD0_opsz48.svg" alt="">
     <p>Your channel</p>
   </div>
   <div class="box-mobile">
-    <img src="icons/home.svg" alt="">
+    <img src="icons/switch_account_FILL0_wght300_GRAD0_opsz48.svg" alt="">
     <p>Switch account</p>
   </div>
   <hr>
   <div class="box-mobile">
-    <img src="icons/home.svg" alt="">
+    <img src="icons/youtube-simple.svg" alt="">
     <p>Get YouTube Premium</p>
   </div>
   <div class="box-mobile">
-    <img src="icons/home.svg" alt="">
+    <img src="icons/shield_person_FILL0_wght300_GRAD0_opsz48.svg" alt="">
     <p>purchase and memberships</p>
   </div>
   <div class="box-mobile">
@@ -95,8 +93,32 @@
 </nav>
 
 
+  <!-- categories -->
+  <div class="label-container">
+    <button class="scroll-button prev-button"><img src="icons/arrow-back.svg" alt=""></button>
+    <nav class="top labels">
+      <button class="all-button btn-list">All</button>
+      <button class="btn-list">Gaming</button>
+      <button class="btn-list">Computer Programming</button>
+      <button class="btn-list">Debates</button>
+      <button class="btn-list">News</button>
+      <button class="btn-list">Physics</button>
+      <button class="btn-list">Recently uploaded</button>
+      <button class="btn-list">Watched</button>
+      <button class="btn-list">New to you</button>
+  
+      <button class="btn-list">Computer Programming</button>
+      <button class="btn-list">Debates</button>
+      <button class="btn-list">News</button>
+      <button class="btn-list">Physics</button>
+      <button class="btn-list">Recently uploaded</button>
+      <button class="btn-list">Watched</button>
+      <button class="btn-list">New to you</button>
+    </nav>
 
-
+  <button class="scroll-button next-button"><img src="icons/arrow-forward.svg" alt=""></button>
+ 
+</div>
 
 
 
