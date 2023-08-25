@@ -33,11 +33,10 @@ function functionForLargeScreen() {
   const changeColumnsButton = document.getElementById("collapseButton");
 
   changeColumnsButton.addEventListener("click", function () {
-    if (window.innerWidth >= 992) {
-      gridContainer.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-    }
+    gridContainer.classList.toggle("sidebar-shrink");
+    
   });
-}
+}  
 function functionForSmallScreen() {
 
     const sidebar = document.querySelector(".sidebar");

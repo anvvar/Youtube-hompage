@@ -165,9 +165,6 @@
   }
 
   /*main style section*/
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
   .video-info-grid {
     height: 90px;
@@ -203,9 +200,6 @@
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
 
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
   .sidebar {
     visibility: visible;
